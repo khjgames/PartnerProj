@@ -44,7 +44,6 @@ enum GameEvents {
 	KP9_PRESSED,
 
 	NUM_GAME_EVENTS
-
 };
 
 class EventHandler
