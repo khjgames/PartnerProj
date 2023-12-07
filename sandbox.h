@@ -2,8 +2,9 @@
 #include "scene.h"
 class sandbox {
 public:
-	sandbox() {};
-	~sandbox() {};
+	sandbox(){}; // constructor
+	~sandbox(){}; // destructor
+	GameObjectsCollection SceneObjects;
 	int Play(); // Returns scene return codes - Kieran
 private:
 	int x = 0;

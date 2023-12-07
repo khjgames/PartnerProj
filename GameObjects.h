@@ -5,6 +5,9 @@
 #include <vector> // how to use -> https://en.cppreference.com/w/cpp/container/vector
 
 class GameObjectsCollection {
+public:
 	GameObjectsCollection();
 	~GameObjectsCollection();
+	Vector2 CameraPosition;
+private:
 };

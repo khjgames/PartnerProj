@@ -1,7 +1,11 @@
 #include "sandbox.h"
-#include "../Graphics.h"
 #include "../Source/Objects/ColourBlock.h" //SYNTAX FIX - missing # infront of include
 #include "../Source/EventHandler.h"
+
+sandbox::sandbox(){ // constructor
+	SceneObjects = GameObjectsCollection();
+}
+sandbox::~sandbox(){} // destructor
 
 int sandbox::Play(){
 	// Examples:

@@ -1,9 +1,14 @@
 #include "level1.h"
-#include "../GameObjects.h"
 #include "../Source/Objects/ColourBlock.h" //SYNTAX FIX - missing # infront of include
 #include "../Source/EventHandler.h"
 
+level1::level1(){ // constructor
+	SceneObjects = GameObjectsCollection();
+}
+level1::~level1(){} // destructor
+
 int level1::Play() {
+
 	// Examples:
 	// to draw text:
 	Graphics::DrawText("Level 1 map", 40, 0, 200, 50, 90, 20, 20); // text, x,y,width,height,r,g,b //SYNTAX FIX - missing " after Programming
