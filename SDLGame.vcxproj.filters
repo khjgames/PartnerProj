@@ -42,6 +42,9 @@
     <Filter Include="Source Files\Levels\Prototype">
       <UniqueIdentifier>{f0a8b048-4e20-4131-a62e-94cd87bcd8fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameObjects\Rect">
+      <UniqueIdentifier>{a53cdb6c-feaf-449d-8c75-57354cebfe4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
@@ -65,9 +68,6 @@
     <ClCompile Include="ImageAssets.cpp">
       <Filter>Source Files\Image</Filter>
     </ClCompile>
-    <ClCompile Include="RectObject.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="Properties.cpp">
       <Filter>Source Files\Properties</Filter>
     </ClCompile>
@@ -76,6 +76,12 @@
     </ClCompile>
     <ClCompile Include="level1.cpp">
       <Filter>Source Files\Levels\Level_1</Filter>
+    </ClCompile>
+    <ClCompile Include="RectObject.cpp">
+      <Filter>Source Files\GameObjects\Rect</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -97,9 +103,6 @@
     <ClInclude Include="ReadImage.h">
       <Filter>Source Files\ReadImage</Filter>
     </ClInclude>
-    <ClInclude Include="RectObject.h">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="Properties.h">
       <Filter>Source Files\Properties</Filter>
     </ClInclude>
@@ -111,6 +114,12 @@
     </ClInclude>
     <ClInclude Include="level1.h">
       <Filter>Source Files\Levels\Level_1</Filter>
+    </ClInclude>
+    <ClInclude Include="RectObject.h">
+      <Filter>Source Files\GameObjects\Rect</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects.h">
+      <Filter>Source Files\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

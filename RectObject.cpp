@@ -2,17 +2,19 @@
 #include "../Graphics.h"
 // Making back-end game object classes for engine - Kieran
 
-RectObject::RectObject(){ // constructor
+RectObject::RectObject(int Id){ // constructor 
+	ObjectId = Id;
 	Color = Color3();
 	Position = Vector2();
 	Size = Vector2();
+	Name = "";
 }
 RectObject::~RectObject(){} // destructor
 
-void RectObject::Draw(){ // handled by engine to display object.
+void RectObject::Draw( Vector2 CamPos ){ // handled by engine to display object.
 	if (Visible == true){
-		Graphics::SetColor(100, 0, 100); 
-		Graphics::DrawRect(Position.x, Position.y, Size.x, Size.y, Filled); // x,y, width, height, filled?
+		Graphics::SetColor(Color.r, Color.g, Color.b); 
+		Graphics::DrawRect(Position.x - CamPos.x, Position.y - CamPos.y, Size.x, Size.y, Filled); // x,y, width, height, filled?
 	}
 };
 

@@ -4,13 +4,15 @@
 
 class RectObject {
 public:
-	RectObject(); // constructor
+	RectObject(int Id); // constructor
 	~RectObject(); // destructor
 	Color3 Color;
 	Vector2 Position;
 	Vector2 Size;
+	string Name;
+	int ObjectId;
 	bool Filled = true;
-	void Draw(); // handled by engine to display object.
+	void Draw( Vector2 CamPos ); // handled by engine to display object.
 	void SetVisible(bool b);
 	bool GetVisible();
 private:

@@ -1,6 +1,7 @@
 #pragma once
-
 // Making back-end game object classes for engine - Kieran
+#include <string>
+using namespace std;
 
 class Vector2 {
 public:
