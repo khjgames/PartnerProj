@@ -1,5 +1,5 @@
 #include "level1.h"
-#include "../Graphics.h"
+#include "../GameObjects.h"
 #include "../Source/Objects/ColourBlock.h" //SYNTAX FIX - missing # infront of include
 #include "../Source/EventHandler.h"
 
