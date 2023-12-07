@@ -26,8 +26,8 @@ int main( int argc, char *argv[] ) {
 		return false;
 	}
 
-	sandbox MenuArea;
-	level1 PlayArea1;
+	sandbox MenuArea = sandbox(); // Initializes its own SceneObjects -  Kieran
+	level1 PlayArea1 = level1(); // Initializes its own SceneObjects - Kieran
 
 	// - VV menu states - Kieran VV - //
 	enum GameStates {AT_MENU, PLAYING_GAME, SHUTTING_DOWN};
