@@ -9,7 +9,6 @@
 #include "../sandbox.h"
 #include "../level1.h"
 // ^^ loading game levels - Kieran ^^ //
-#include <vector> // how to use -> https://en.cppreference.com/w/cpp/container/vector
 
 using namespace std; // so I don't have to type std::vector
 
