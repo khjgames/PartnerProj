@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{7ad5c615-454f-4996-9b8a-80d529d4ffb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Events">
+      <UniqueIdentifier>{55f39cef-180f-4e9f-8e8b-f2c09f00ec0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{e8c0bd4e-ba7e-45f4-9492-7e6f05cd9716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ReadImage">
+      <UniqueIdentifier>{ed5e3e47-0376-40e6-b64b-634df42863c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Image">
+      <UniqueIdentifier>{8fc3a96a-7aba-4c34-982a-6ebc42b536f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects">
+      <UniqueIdentifier>{6cc16632-0eb4-446a-b0bc-bbecc121d79e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Properties">
+      <UniqueIdentifier>{001f80a5-4b38-4e90-b313-5094b0c326e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels">
+      <UniqueIdentifier>{f8cf41b7-a8fc-4959-8112-cf34d76abb80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels\Menu">
+      <UniqueIdentifier>{40e6763a-9003-4755-b63b-a7ccc08709d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels\Level_1">
+      <UniqueIdentifier>{4a805cfa-0800-4b2a-b414-65b365d11d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels\Prototype">
+      <UniqueIdentifier>{f0a8b048-4e20-4131-a62e-94cd87bcd8fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\ColourBlock.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EventHandler.cpp">
+      <Filter>Source Files\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Source Files\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadImage.cpp">
+      <Filter>Source Files\ReadImage</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAssets.cpp">
+      <Filter>Source Files\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="RectObject.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Properties.cpp">
+      <Filter>Source Files\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="sandbox.cpp">
+      <Filter>Source Files\Levels\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="level1.cpp">
+      <Filter>Source Files\Levels\Level_1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Objects\ColourBlock.h">
+      <Filter>Source Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\ObjData.h">
+      <Filter>Source Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\EventHandler.h">
+      <Filter>Source Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Source Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Source Files\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadImage.h">
+      <Filter>Source Files\ReadImage</Filter>
+    </ClInclude>
+    <ClInclude Include="RectObject.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Properties.h">
+      <Filter>Source Files\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="sandbox.h">
+      <Filter>Source Files\Levels\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Source Files\Levels\Prototype</Filter>
+    </ClInclude>
+    <ClInclude Include="level1.h">
+      <Filter>Source Files\Levels\Level_1</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
