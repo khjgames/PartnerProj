@@ -24,6 +24,7 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="level1.cpp" />
+    <ClCompile Include="level2.cpp" />
     <ClCompile Include="Properties.cpp" />
     <ClCompile Include="ReadImage.cpp" />
     <ClCompile Include="RectObject.cpp" />
@@ -36,6 +37,7 @@
     <ClInclude Include="GameObjects.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Image.h" />
+    <ClInclude Include="level2.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="level1.h" />
     <ClInclude Include="Properties.h" />

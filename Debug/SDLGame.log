@@ -1,11 +1,2 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CONNECTIONS DAY.vcxproj, GAME311_SDLGame.vcxproj, Lab8c.vcxproj, SIMON.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  EventHandler.cpp
-  ColourBlock.cpp
-C:\Users\khjga\OneDrive - St. Lawrence College\Spectrum\Game102\CGA_2_Git_Project\Project\PartnerProj\Source\Objects\ColourBlock.cpp(32,17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\khjga\OneDrive - St. Lawrence College\Spectrum\Game102\CGA_2_Git_Project\Project\PartnerProj\Source\Objects\ColourBlock.cpp(33,17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-C:\Users\khjga\OneDrive - St. Lawrence College\Spectrum\Game102\CGA_2_Git_Project\Project\PartnerProj\Source\main.cpp(23,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  level1.cpp
-  sandbox.cpp
-  Generating Code...
   SDLGame.vcxproj -> C:\Users\khjga\OneDrive - St. Lawrence College\Spectrum\Game102\CGA_2_Git_Project\Project\Debug\PARTNER PROJECT.exe
