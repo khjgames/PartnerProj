@@ -20,55 +20,22 @@ level2::level2() { // constructor
 	Wall3.Size.Set(880, 40);
 	Wall3.Position.Set(0, 340);
 
-	RectObject& Stair = SceneObjects.CreateRect();
-	Stair.Color.Set(25, 25, 25);
-	Stair.Size.Set(100, 40);
-	Stair.Position.Set(880, 380);
+	// platforms are 2 pixels shorter than usual to prevent the final step from clipping into floor
+	for (int i = 0; i < 5; i++) // right stairs
+	{
+		RectObject& Stair = SceneObjects.CreateRect();
+		Stair.Color.Set(25, 25, 25);
+		Stair.Size.Set(100, 39);
+		Stair.Position.Set(880 + 100 * i, 380 + 38 * i);
+	}
 
-	RectObject& Stair2 = SceneObjects.CreateRect();
-	Stair2.Color.Set(25, 25, 25);
-	Stair2.Size.Set(100, 40);
-	Stair2.Position.Set(980, 420);
-
-	RectObject& Stair3 = SceneObjects.CreateRect();
-	Stair3.Color.Set(25, 25, 25);
-	Stair3.Size.Set(100, 40);
-	Stair3.Position.Set(1080, 460);
-
-	RectObject& Stair4 = SceneObjects.CreateRect();
-	Stair4.Color.Set(25, 25, 25);
-	Stair4.Size.Set(100, 40);
-	Stair4.Position.Set(1200, 500);
-
-	RectObject& Stair5 = SceneObjects.CreateRect();
-	Stair5.Color.Set(25, 25, 25);
-	Stair5.Size.Set(100, 40);
-	Stair5.Position.Set(1180, 500);
-
-	RectObject& Stair6 = SceneObjects.CreateRect();
-	Stair6.Color.Set(25, 25, 25);
-	Stair6.Size.Set(100, 40);
-	Stair6.Position.Set(0, 500);
-
-	RectObject& Stair7 = SceneObjects.CreateRect();
-	Stair7.Color.Set(25, 25, 25);
-	Stair7.Size.Set(100, 40);
-	Stair7.Position.Set(100, 540);
-
-	RectObject& Stair8 = SceneObjects.CreateRect();
-	Stair8.Color.Set(25, 25, 25);
-	Stair8.Size.Set(100, 40);
-	Stair8.Position.Set(200, 580);
-
-	RectObject& Stair9 = SceneObjects.CreateRect();
-	Stair9.Color.Set(25, 25, 25);
-	Stair9.Size.Set(100, 40);
-	Stair9.Position.Set(300, 620);
-
-	RectObject& Stair10 = SceneObjects.CreateRect();
-	Stair10.Color.Set(25, 25, 25);
-	Stair10.Size.Set(100, 40);
-	Stair10.Position.Set(400, 660);
+	for (int i = 0; i < 5; i++) // left stairs
+	{
+		RectObject& Stair = SceneObjects.CreateRect();
+		Stair.Color.Set(25, 25, 25);
+		Stair.Size.Set(100, 38);
+		Stair.Position.Set(0 + 100 * i, 490 + 38 * i);
+	}
 
 	RectObject& Jeff = SceneObjects.CreateRect("Jeff");
 	Jeff.Color.Set(0, 50, 6); // rgb(0, 127, 14)
