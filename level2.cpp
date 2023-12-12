@@ -5,83 +5,89 @@
 level2::level2() { // constructor
 	SceneObjects = GameObjectsCollection();
 
-	for (int i = 1; i < 10; i++) {
-		RectObject& BgRect = SceneObjects.CreateRect();
-		BgRect.Color.Set(0, 50, 50);
-		BgRect.Size.Set(10, 10);
-		BgRect.Position.Set(30 * i, 35 * i / 3 + 50);
-	}
+	RectObject& Wall = SceneObjects.CreateRect();
+	Wall.Color.Set(25, 25, 25);
+	Wall.Size.Set(1280, 40);
+	Wall.Position.Set(0, 0);
 
-	RectObject& Red = SceneObjects.CreateRect("red");
-	Red.Color.Set(100, 0, 0);
-	Red.Size.Set(40, 40);
-	Red.Position.Set(50, 150);
-	//
+	RectObject& Wall2 = SceneObjects.CreateRect();
+	Wall2.Color.Set(25, 25, 25);
+	Wall2.Size.Set(1280, 40);
+	Wall2.Position.Set(0, 680);
 
-	RectObject& Green = SceneObjects.CreateRect("green");
-	Green.Color.Set(0, 100, 0);
-	Green.Size.Set(70, 40);
-	Green.Position.Set(350, 175);
+	RectObject& Wall3 = SceneObjects.CreateRect();
+	Wall3.Color.Set(25, 25, 25);
+	Wall3.Size.Set(880, 40);
+	Wall3.Position.Set(0, 340);
+
+	RectObject& Stair = SceneObjects.CreateRect();
+	Stair.Color.Set(25, 25, 25);
+	Stair.Size.Set(100, 40);
+	Stair.Position.Set(880, 380);
+
+	RectObject& Stair2 = SceneObjects.CreateRect();
+	Stair2.Color.Set(25, 25, 25);
+	Stair2.Size.Set(100, 40);
+	Stair2.Position.Set(980, 420);
+
+	RectObject& Stair3 = SceneObjects.CreateRect();
+	Stair3.Color.Set(25, 25, 25);
+	Stair3.Size.Set(100, 40);
+	Stair3.Position.Set(1080, 460);
+
+	RectObject& Stair4 = SceneObjects.CreateRect();
+	Stair4.Color.Set(25, 25, 25);
+	Stair4.Size.Set(100, 40);
+	Stair4.Position.Set(1200, 500);
+
+	RectObject& Stair5 = SceneObjects.CreateRect();
+	Stair5.Color.Set(25, 25, 25);
+	Stair5.Size.Set(100, 40);
+	Stair5.Position.Set(1180, 500);
+
+	RectObject& Stair6 = SceneObjects.CreateRect();
+	Stair6.Color.Set(25, 25, 25);
+	Stair6.Size.Set(100, 40);
+	Stair6.Position.Set(0, 500);
+
+	RectObject& Stair7 = SceneObjects.CreateRect();
+	Stair7.Color.Set(25, 25, 25);
+	Stair7.Size.Set(100, 40);
+	Stair7.Position.Set(100, 540);
+
+	RectObject& Stair8 = SceneObjects.CreateRect();
+	Stair8.Color.Set(25, 25, 25);
+	Stair8.Size.Set(100, 40);
+	Stair8.Position.Set(200, 580);
+
+	RectObject& Stair9 = SceneObjects.CreateRect();
+	Stair9.Color.Set(25, 25, 25);
+	Stair9.Size.Set(100, 40);
+	Stair9.Position.Set(300, 620);
+
+	RectObject& Stair10 = SceneObjects.CreateRect();
+	Stair10.Color.Set(25, 25, 25);
+	Stair10.Size.Set(100, 40);
+	Stair10.Position.Set(400, 660);
+
+	RectObject& Jeff = SceneObjects.CreateRect("Jeff");
+	Jeff.Color.Set(0, 50, 6); // rgb(0, 127, 14)
+	Jeff.Size.Set(40, 40);
+	Jeff.Position.Set(50, 300);
+
+	RectObject& John = SceneObjects.CreateRect("John");
+	John.Color.Set(0, 43, 74); // rgb(0, 92, 127)
+	John.Size.Set(40, 40);
+	John.Position.Set(1190, 640);
 }
 level2::~level2() {} // destructor
 
 int level2::Play() {
-
-	// Examples:
-	// to draw text:
-	Graphics::DrawText("Level 2 map", 40, 0, 200, 50, 90, 20, 20); // text, x,y,width,height,r,g,b //SYNTAX FIX - missing " after Programming
-
-	Graphics::DrawText("Keypad 3 to QUIT GAME!", 40, 300, 200, 50, 20, 20, 90); // text, x,y,width,height,r,g,b 
+	Graphics::DrawText("Keypad 3 to QUIT GAME!", 20, 640, 250, 30, 50, 50, 50);
 
 	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
 	if (EventHandler::events[GameEvents::KP3_PRESSED] == true) {
 		return scene::QUIT_GAME;
-	}
-
-	RectObject& Red = SceneObjects.GetRect("red");
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::W_PRESSED] == true) {
-		Red.Position.y -= 3;
-	}
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::A_PRESSED] == true) {
-		Red.Position.x -= 3;
-	}
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::S_PRESSED] == true) {
-		Red.Position.y += 3;
-	}
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::D_PRESSED] == true) {
-		Red.Position.x += 3;
-	}
-
-
-
-
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::UP_PRESSED] == true) {
-		SceneObjects.CameraPosition.y -= 2;
-	}
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::LEFT_PRESSED] == true) {
-		SceneObjects.CameraPosition.x -= 2;
-	}
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::DOWN_PRESSED] == true) {
-		SceneObjects.CameraPosition.y += 2;
-	}
-
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::RIGHT_PRESSED] == true) {
-		SceneObjects.CameraPosition.x += 2;
 	}
 
 	SceneObjects.Render();
