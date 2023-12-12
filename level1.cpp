@@ -27,11 +27,11 @@ level1::~level1(){} // destructor
 
 int level1::Play() {
 
-	// Examples:
-	// to draw text:
-	Graphics::DrawText("Level 1 map", 40, 0, 200, 50, 90, 20, 20); // text, x,y,width,height,r,g,b //SYNTAX FIX - missing " after Programming
+	// text, x, y, width, height, r, g, b 
+	Graphics::DrawText("JEFF &", 473, 75, 200, 60, 90, 20, 20);
+	Graphics::DrawText("JOHN", 690, 75, 133, 60, 90, 20, 20);
 
-	Graphics::DrawText("Keypad 3 to QUIT GAME!", 40, 300, 200, 50, 20, 20, 90); // text, x,y,width,height,r,g,b 
+	Graphics::DrawText("Keypad 3 to QUIT GAME!", 40, 300, 200, 50, 20, 20, 90);
 
 	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
 	if (EventHandler::events[GameEvents::KP3_PRESSED] == true) {
@@ -59,10 +59,6 @@ int level1::Play() {
 	if (EventHandler::events[GameEvents::D_PRESSED] == true) {
 		Red.Position.x += 3;
 	}
-
-
-
-
 
 	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
 	if (EventHandler::events[GameEvents::UP_PRESSED] == true) {
