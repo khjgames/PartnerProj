@@ -1,3 +1,2 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CONNECTIONS DAY.vcxproj, GAME311_SDLGame.vcxproj, Lab8c.vcxproj, SIMON.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  level1.cpp
   SDLGame.vcxproj -> C:\Users\desti\OneDrive - St. Lawrence College\Game 102 - Programming Fundementals\Partner Project\CGA_2_Git_Project\Project\Debug\PARTNER PROJECT.exe

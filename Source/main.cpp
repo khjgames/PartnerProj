@@ -8,6 +8,7 @@
 // VV loading game levels - Kieran VV // 
 #include "../sandbox.h"
 #include "../level1.h"
+#include "../level2.h"
 // ^^ loading game levels - Kieran ^^ //
 
 using namespace std; // so I don't have to type std::vector
@@ -28,6 +29,7 @@ int main( int argc, char *argv[] ) {
 
 	sandbox MenuArea = sandbox(); // Initializes its own SceneObjects -  Kieran
 	level1 PlayArea1 = level1(); // Initializes its own SceneObjects - Kieran
+	level2 PlayArea2 = level2(); // Initializes its own SceneObjects - Kieran
 
 	// - VV menu states - Kieran VV - //
 	enum GameStates {AT_MENU, PLAYING_GAME, SHUTTING_DOWN};
@@ -44,7 +46,8 @@ int main( int argc, char *argv[] ) {
 		// - VV menu functionality - Kieran VV - //
 		switch (GameState){
 			case AT_MENU: {
-				int MenuState = MenuArea.Play(); 
+				//int MenuState = MenuArea.Play(); 
+				int MenuState = PlayArea2.Play();
 				switch (MenuState){
 					case scene::ReturnCodes::QUIT_GAME:{
 						GameState = SHUTTING_DOWN; 
