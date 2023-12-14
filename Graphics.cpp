@@ -1,6 +1,5 @@
 #include "Graphics.h"
 #include <SDL_ttf.h>
-#include "../Image.h" // Experimental ~ coded to learn, with guesswork by Kieran J
 
 SDL_Window* Graphics::window;
 SDL_Renderer* Graphics::renderer;
@@ -26,9 +25,6 @@ bool Graphics::Init()
 	renderer = SDL_CreateRenderer(window, -1, 0);
 	if (!renderer){
 		return false;
-	}
-	else {
-		Image::InitRenderer(renderer); // Experimental ~ coded to learn, with guesswork by Kieran J
 	}
 
 	TTF_Init();

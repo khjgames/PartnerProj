@@ -2,8 +2,7 @@
 #include "../Graphics.h"
 // Making back-end game object classes for engine - Kieran
 
-RectObject::RectObject(int Id){ // constructor 
-	ObjectId = Id;
+RectObject::RectObject() { // constructor 
 	Color = Color3();
 	Position = Vector2();
 	Size = Vector2();

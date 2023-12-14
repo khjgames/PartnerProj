@@ -7,4 +7,7 @@ public:
 	GameObjectsCollection SceneObjects;
 	int Play(); // Returns scene return codes - Kieran
 private:
+	bool SwappedChars = false;
+	Character John;
+	Character Jeff;
 };

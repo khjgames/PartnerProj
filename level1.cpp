@@ -25,19 +25,25 @@ level1::level1(){ // constructor
 	Wall4.Size.Set(500, 40);
 	Wall4.Position.Set(780, 340);
 
-	RectObject &Jeff = SceneObjects.CreateRect("Jeff");
-	Jeff.Color.Set(0, 50, 6); // rgb(0, 127, 14)
-	Jeff.Size.Set(40, 40);
-	Jeff.Position.Set(50, 300);
+	/*
+	Character &Jeff = SceneObjects.CreateCharacter("Jeff");
+	Jeff.Body.Color.Set(0, 50, 6); // rgb(0, 127, 14)
+	Jeff.Body.Size.Set(40, 40);
+	Jeff.Body.Position.Set(50, 300);
 
-	RectObject& John = SceneObjects.CreateRect("John");
-	John.Color.Set(0, 43, 74); // rgb(0, 92, 127)
-	John.Size.Set(40, 40);
-	John.Position.Set(1190, 640);
+	Character& John = SceneObjects.CreateCharacter("John");
+	John.Body.Color.Set(0, 50, 6); // rgb(0, 127, 14)
+	John.Body.Size.Set(40, 40);
+	John.Body.Position.Set(50, 300);
+	*/
 }
 level1::~level1(){} // destructor
 
 int level1::Play() {
+
+	Graphics::DrawText("WASD -> PRIMARY CHARACTER", 60, 60, 260, 40, 85, 85, 85);
+	Graphics::DrawText("ARROW KEYS -> SECONDARY CHARACTER", 60, 150, 300, 40, 85, 85, 85);
+	Graphics::DrawText("J -> SWAP PRIMARY & SECONDARY", 60, 240, 280, 40, 85, 85, 85);
 
 	// text, x, y, width, height, r, g, b 
 	Graphics::DrawText("JEFF &", 460, 75, 200, 60, 0, 50, 6);
@@ -45,10 +51,37 @@ int level1::Play() {
 
 	Graphics::DrawText("Keypad 3 to QUIT GAME!", 20, 640, 250, 30, 50, 50, 50);
 
-	// this is an if statement. it checks if the d key is pressed and does what's inside the { } if it is
-	if (EventHandler::events[GameEvents::KP3_PRESSED] == true) {
-		return scene::QUIT_GAME;
+	if (EventHandler::events[GameEvents::J_PRESSED] == true) {
+		 
 	}
+	if (EventHandler::events[GameEvents::J_PRESSED] == false) {
+ 
+	}
+
+	/*
+	Character& Jeff = SceneObjects.GetCharacter("Jeff");
+	Character& John = SceneObjects.GetCharacter("John");
+
+	if (EventHandler::events[GameEvents::W_PRESSED] == true) { 
+		Jeff.Jump();
+	}
+	if (EventHandler::events[GameEvents::A_PRESSED] == true) {
+		Jeff.Move(true);
+	}
+	if (EventHandler::events[GameEvents::D_PRESSED] == true) {
+		Jeff.Move(false);
+	}
+
+	if (EventHandler::events[GameEvents::UP_PRESSED] == true) {
+		John.Jump();
+	}
+	if (EventHandler::events[GameEvents::LEFT_PRESSED] == true) {
+		John.Move(true);
+	}
+	if (EventHandler::events[GameEvents::RIGHT_PRESSED] == true) {
+		John.Move(false);
+	}*/
+
 
 	SceneObjects.Render();
 

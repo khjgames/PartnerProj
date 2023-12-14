@@ -4,7 +4,7 @@
 
 class RectObject {
 public:
-	RectObject(int Id); // constructor
+	RectObject(); // constructor
 	~RectObject(); // destructor
 	Color3 Color;
 	Vector2 Position;

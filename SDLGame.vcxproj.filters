@@ -21,9 +21,6 @@
     <Filter Include="Source Files\ReadImage">
       <UniqueIdentifier>{ed5e3e47-0376-40e6-b64b-634df42863c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Image">
-      <UniqueIdentifier>{8fc3a96a-7aba-4c34-982a-6ebc42b536f9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\GameObjects">
       <UniqueIdentifier>{6cc16632-0eb4-446a-b0bc-bbecc121d79e}</UniqueIdentifier>
     </Filter>
@@ -48,6 +45,9 @@
     <Filter Include="Source Files\Levels\Level_2">
       <UniqueIdentifier>{7dcce72b-9dd8-4aa6-b8c0-5b53710040a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameObjects\Character">
+      <UniqueIdentifier>{199aa141-a844-4788-b079-5197553c2453}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
@@ -62,14 +62,8 @@
     <ClCompile Include="Graphics.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Image.cpp">
-      <Filter>Source Files\Image</Filter>
-    </ClCompile>
     <ClCompile Include="ReadImage.cpp">
       <Filter>Source Files\ReadImage</Filter>
-    </ClCompile>
-    <ClCompile Include="ImageAssets.cpp">
-      <Filter>Source Files\Image</Filter>
     </ClCompile>
     <ClCompile Include="Properties.cpp">
       <Filter>Source Files\Properties</Filter>
@@ -89,6 +83,9 @@
     <ClCompile Include="level2.cpp">
       <Filter>Source Files\Levels\Level_2</Filter>
     </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\GameObjects\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Objects\ColourBlock.h">
@@ -102,9 +99,6 @@
     </ClInclude>
     <ClInclude Include="Graphics.h">
       <Filter>Source Files\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Image.h">
-      <Filter>Source Files\Image</Filter>
     </ClInclude>
     <ClInclude Include="ReadImage.h">
       <Filter>Source Files\ReadImage</Filter>
@@ -129,6 +123,9 @@
     </ClInclude>
     <ClInclude Include="level2.h">
       <Filter>Source Files\Levels\Level_2</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Source Files\GameObjects\Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

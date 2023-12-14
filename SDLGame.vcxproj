@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="GameObjects.cpp" />
-    <ClCompile Include="ImageAssets.cpp" />
     <ClCompile Include="Graphics.cpp" />
-    <ClCompile Include="Image.cpp" />
     <ClCompile Include="level1.cpp" />
     <ClCompile Include="level2.cpp" />
     <ClCompile Include="Properties.cpp" />
@@ -34,9 +33,9 @@
     <ClCompile Include="Source\Objects\ColourBlock.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Character.h" />
     <ClInclude Include="GameObjects.h" />
     <ClInclude Include="Graphics.h" />
-    <ClInclude Include="Image.h" />
     <ClInclude Include="level2.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="level1.h" />
