@@ -25,6 +25,9 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="level1.cpp" />
     <ClCompile Include="level2.cpp" />
+    <ClCompile Include="level3.cpp" />
+    <ClCompile Include="level4.cpp" />
+    <ClCompile Include="level5.cpp" />
     <ClCompile Include="Properties.cpp" />
     <ClCompile Include="ReadImage.cpp" />
     <ClCompile Include="RectObject.cpp" />
@@ -38,6 +41,9 @@
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="level2.h" />
+    <ClInclude Include="level3.h" />
+    <ClInclude Include="level4.h" />
+    <ClInclude Include="level5.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="level1.h" />
     <ClInclude Include="Properties.h" />

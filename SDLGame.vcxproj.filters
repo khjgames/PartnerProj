@@ -48,6 +48,15 @@
     <Filter Include="Source Files\Levels\Level_2">
       <UniqueIdentifier>{7dcce72b-9dd8-4aa6-b8c0-5b53710040a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Levels\Level_3">
+      <UniqueIdentifier>{cd204bc3-6594-4553-a887-a8ec69dc51c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels\Level_4">
+      <UniqueIdentifier>{66350952-d8cc-436f-b834-27a4812a6b31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels\Level_5">
+      <UniqueIdentifier>{e2fc4d6c-973f-4b7d-a178-64c5b4a9c01c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
@@ -89,6 +98,15 @@
     <ClCompile Include="level2.cpp">
       <Filter>Source Files\Levels\Level_2</Filter>
     </ClCompile>
+    <ClCompile Include="level3.cpp">
+      <Filter>Source Files\Levels\Level_3</Filter>
+    </ClCompile>
+    <ClCompile Include="level4.cpp">
+      <Filter>Source Files\Levels\Level_4</Filter>
+    </ClCompile>
+    <ClCompile Include="level5.cpp">
+      <Filter>Source Files\Levels\Level_5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Objects\ColourBlock.h">
@@ -129,6 +147,15 @@
     </ClInclude>
     <ClInclude Include="level2.h">
       <Filter>Source Files\Levels\Level_2</Filter>
+    </ClInclude>
+    <ClInclude Include="level3.h">
+      <Filter>Source Files\Levels\Level_3</Filter>
+    </ClInclude>
+    <ClInclude Include="level4.h">
+      <Filter>Source Files\Levels\Level_4</Filter>
+    </ClInclude>
+    <ClInclude Include="level5.h">
+      <Filter>Source Files\Levels\Level_5</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
