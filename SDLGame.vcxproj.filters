@@ -45,6 +45,15 @@
     <Filter Include="Source Files\GameObjects\Character">
       <UniqueIdentifier>{199aa141-a844-4788-b079-5197553c2453}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Levels\Level_3">
+      <UniqueIdentifier>{88a60013-2b33-4ac6-8195-10cc44342e15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels\Level_4">
+      <UniqueIdentifier>{2217018d-1d7c-42e4-b8e3-7bdcbb9048da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels\End">
+      <UniqueIdentifier>{fbae06b2-efa9-490c-801f-c062a2fdf6c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
@@ -79,6 +88,15 @@
     </ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>Source Files\GameObjects\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="level3.cpp">
+      <Filter>Source Files\Levels\Level_3</Filter>
+    </ClCompile>
+    <ClCompile Include="level4.cpp">
+      <Filter>Source Files\Levels\Level_4</Filter>
+    </ClCompile>
+    <ClCompile Include="end.cpp">
+      <Filter>Source Files\Levels\End</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +135,15 @@
     </ClInclude>
     <ClInclude Include="Character.h">
       <Filter>Source Files\GameObjects\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="level3.h">
+      <Filter>Source Files\Levels\Level_3</Filter>
+    </ClInclude>
+    <ClInclude Include="level4.h">
+      <Filter>Source Files\Levels\Level_4</Filter>
+    </ClInclude>
+    <ClInclude Include="end.h">
+      <Filter>Source Files\Levels\End</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

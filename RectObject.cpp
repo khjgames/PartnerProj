@@ -12,7 +12,7 @@ RectObject::~RectObject(){} // destructor
 
 void RectObject::Update(){
 	if (HasGravity){
-		if ((JumpState > 17) || (JumpState == 0)){
+		if ((JumpState > 32) || (JumpState == 0)){
 			if (Rays.down >= 10) { // fall faster when high up
 				Position.y += 3;
 			}
@@ -26,7 +26,7 @@ void RectObject::Update(){
 				}
 			}
 		}
-		if (JumpState >= 23) JumpState = 0;
+		if (JumpState >= 38) JumpState = 0;
 		//
 		if (JumpState > 0) { // apply force for 200 ms & 62.5 fps
 			if (Rays.up >= 1) { // Check if we can go up at least 2 pixel and apply velocity with occasional boosts

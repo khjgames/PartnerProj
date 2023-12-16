@@ -9,6 +9,9 @@
 #include "../sandbox.h"
 #include "../level1.h" 
 #include "../level2.h"
+#include "../level3.h"
+#include "../level4.h"
+#include "../end.h"
 // ^^ loading game levels - Kieran ^^ //
 
 using namespace std; // so I don't have to type std::vector
@@ -30,8 +33,11 @@ int main( int argc, char *argv[] ) {
 	sandbox MenuArea = sandbox(); 
 	level1 PlayArea1 = level1(); 
 	level2 PlayArea2 = level2();
+	level3 PlayArea3 = level3();
+	level4 PlayArea4 = level4();
+	levelEnd EndScreen = levelEnd();
 	 
-	enum GameStates {AT_MENU, PLAY_LV_1, PLAY_LV_2, SHUTTING_DOWN};
+	enum GameStates {AT_MENU, PLAY_LV_1, PLAY_LV_2, PLAY_LV_3, PLAY_LV_4, PLAY_END, SHUTTING_DOWN};
 	int GameState = AT_MENU; 
 	
 	// Main game loop
@@ -44,7 +50,7 @@ int main( int argc, char *argv[] ) {
 		// - VV menu functionality - //
 		switch (GameState){
 			case AT_MENU: {
-				int MenuState = MenuArea.Play(); 
+				int MenuState = MenuArea.Play();
 				switch (MenuState){
 					case scene::ReturnCodes::QUIT_GAME:{
 						GameState = SHUTTING_DOWN; 
@@ -58,24 +64,48 @@ int main( int argc, char *argv[] ) {
 						GameState = PLAY_LV_2;
 						break;
 					}
+					case scene::ReturnCodes::START_LV_3: {
+						GameState = PLAY_LV_3;
+						break;
+					}
+					case scene::ReturnCodes::START_LV_4: {
+						GameState = PLAY_LV_4;
+						break;
+					}
+					case scene::ReturnCodes::START_END: {
+						GameState = PLAY_END;
+						break;
+					}
 				} 
 				break;
 			}
 			case PLAY_LV_1: {
 				int PlayState = PlayArea1.Play();
 				switch (PlayState) {
-					case scene::ReturnCodes::QUIT_GAME: {
-						GameState = SHUTTING_DOWN;
-						break;
-					}
-					case scene::ReturnCodes::START_GAME: {
-						GameState = PLAY_LV_1;
-						break;
-					}
-					case scene::ReturnCodes::START_LV_2: {
-						GameState = PLAY_LV_2;
-						break;
-					}
+				case scene::ReturnCodes::QUIT_GAME: {
+					GameState = SHUTTING_DOWN;
+					break;
+				}
+				case scene::ReturnCodes::START_GAME: {
+					GameState = PLAY_LV_1;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_2: {
+					GameState = PLAY_LV_2;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_3: {
+					GameState = PLAY_LV_3;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_4: {
+					GameState = PLAY_LV_4;
+					break;
+				}
+				case scene::ReturnCodes::START_END: {
+					GameState = PLAY_END;
+					break;
+				}
 				}
 				break;
 			}
@@ -92,6 +122,108 @@ int main( int argc, char *argv[] ) {
 				}
 				case scene::ReturnCodes::START_LV_2: {
 					GameState = PLAY_LV_2;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_3: {
+					GameState = PLAY_LV_3;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_4: {
+					GameState = PLAY_LV_4;
+					break;
+				}
+				case scene::ReturnCodes::START_END: {
+					GameState = PLAY_END;
+					break;
+				}
+				}
+				break;
+			}
+			case PLAY_LV_3: {
+				int PlayState = PlayArea3.Play();
+				switch (PlayState) {
+				case scene::ReturnCodes::QUIT_GAME: {
+					GameState = SHUTTING_DOWN;
+					break;
+				}
+				case scene::ReturnCodes::START_GAME: {
+					GameState = PLAY_LV_1;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_2: {
+					GameState = PLAY_LV_2;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_3: {
+					GameState = PLAY_LV_3;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_4: {
+					GameState = PLAY_LV_4;
+					break;
+				}
+				case scene::ReturnCodes::START_END: {
+					GameState = PLAY_END;
+					break;
+				}
+				}
+				break;
+			}
+			case PLAY_LV_4: {
+				int PlayState = PlayArea4.Play();
+				switch (PlayState) {
+				case scene::ReturnCodes::QUIT_GAME: {
+					GameState = SHUTTING_DOWN;
+					break;
+				}
+				case scene::ReturnCodes::START_GAME: {
+					GameState = PLAY_LV_1;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_2: {
+					GameState = PLAY_LV_2;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_3: {
+					GameState = PLAY_LV_3;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_4: {
+					GameState = PLAY_LV_4;
+					break;
+				}
+				case scene::ReturnCodes::START_END: {
+					GameState = PLAY_END;
+					break;
+				}
+				}
+				break;
+			}
+			case PLAY_END: {
+				int PlayState = EndScreen.Play();
+				switch (PlayState) {
+				case scene::ReturnCodes::QUIT_GAME: {
+					GameState = SHUTTING_DOWN;
+					break;
+				}
+				case scene::ReturnCodes::START_GAME: {
+					GameState = PLAY_LV_1;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_2: {
+					GameState = PLAY_LV_2;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_3: {
+					GameState = PLAY_LV_3;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_4: {
+					GameState = PLAY_LV_4;
+					break;
+				}
+				case scene::ReturnCodes::START_END: {
+					GameState = PLAY_END;
 					break;
 				}
 				}
