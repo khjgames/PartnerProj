@@ -25,7 +25,6 @@
     <ClCompile Include="level1.cpp" />
     <ClCompile Include="level2.cpp" />
     <ClCompile Include="Properties.cpp" />
-    <ClCompile Include="ReadImage.cpp" />
     <ClCompile Include="RectObject.cpp" />
     <ClCompile Include="sandbox.cpp" />
     <ClCompile Include="Source\EventHandler.cpp" />
@@ -40,7 +39,6 @@
     <ClInclude Include="scene.h" />
     <ClInclude Include="level1.h" />
     <ClInclude Include="Properties.h" />
-    <ClInclude Include="ReadImage.h" />
     <ClInclude Include="RectObject.h" />
     <ClInclude Include="sandbox.h" />
     <ClInclude Include="Source\EventHandler.h" />

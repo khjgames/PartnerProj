@@ -7,5 +7,6 @@ public:
 	GameObjectsCollection SceneObjects;
 	int Play(); // Returns scene return codes - Kieran
 private:
+	bool JPressedStateLastFrame = false;
 	bool SwappedChars = false;
 };

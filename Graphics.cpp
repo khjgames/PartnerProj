@@ -4,8 +4,7 @@
 SDL_Window* Graphics::window;
 SDL_Renderer* Graphics::renderer;
 
-bool Graphics::Init()
-{
+bool Graphics::Init(){
 	const int WINDOW_WIDTH = 1280;
 	const int WINDOW_HEIGHT = 720;
 
@@ -32,8 +31,7 @@ bool Graphics::Init()
 	return true;
 }
 
-void Graphics::StartRender()
-{
+void Graphics::StartRender(){
 	// clear the screen color
 	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
 	SDL_RenderClear(renderer);

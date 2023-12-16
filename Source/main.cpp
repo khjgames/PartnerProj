@@ -7,7 +7,8 @@
 #include "../RectObject.h" 
 // VV loading game levels - Kieran VV // 
 #include "../sandbox.h"
-#include "../level1.h"
+#include "../level1.h" 
+#include "../level2.h"
 // ^^ loading game levels - Kieran ^^ //
 
 using namespace std; // so I don't have to type std::vector
@@ -26,13 +27,12 @@ int main( int argc, char *argv[] ) {
 		return false;
 	}
 
-	sandbox MenuArea = sandbox(); // Initializes its own SceneObjects -  Kieran
-	level1 PlayArea1 = level1(); // Initializes its own SceneObjects - Kieran
-
-	// - VV menu states - Kieran VV - //
-	enum GameStates {AT_MENU, PLAYING_GAME, SHUTTING_DOWN};
-	int GameState = AT_MENU;
-	// - ^^ menu states - Kieran ^^ - //
+	sandbox MenuArea = sandbox(); 
+	level1 PlayArea1 = level1(); 
+	level2 PlayArea2 = level2();
+	 
+	enum GameStates {AT_MENU, PLAY_LV_1, PLAY_LV_2, SHUTTING_DOWN};
+	int GameState = AT_MENU; 
 	
 	// Main game loop
 	while (GameRunning) {
@@ -41,7 +41,7 @@ int main( int argc, char *argv[] ) {
 		// handle button events
 		GameRunning = EventHandler::Update();
 
-		// - VV menu functionality - Kieran VV - //
+		// - VV menu functionality - //
 		switch (GameState){
 			case AT_MENU: {
 				int MenuState = MenuArea.Play(); 
@@ -51,13 +51,17 @@ int main( int argc, char *argv[] ) {
 						break;
 					}
 					case scene::ReturnCodes::START_GAME: {
-						GameState = PLAYING_GAME;
+						GameState = PLAY_LV_1;
+						break;
+					}
+					case scene::ReturnCodes::START_LV_2: {
+						GameState = PLAY_LV_2;
 						break;
 					}
 				} 
 				break;
 			}
-			case PLAYING_GAME: {
+			case PLAY_LV_1: {
 				int PlayState = PlayArea1.Play();
 				switch (PlayState) {
 					case scene::ReturnCodes::QUIT_GAME: {
@@ -65,14 +69,36 @@ int main( int argc, char *argv[] ) {
 						break;
 					}
 					case scene::ReturnCodes::START_GAME: {
-						GameState = PLAYING_GAME;
+						GameState = PLAY_LV_1;
+						break;
+					}
+					case scene::ReturnCodes::START_LV_2: {
+						GameState = PLAY_LV_2;
 						break;
 					}
 				}
 				break;
 			}
+			case PLAY_LV_2: {
+				int PlayState = PlayArea2.Play();
+				switch (PlayState) {
+				case scene::ReturnCodes::QUIT_GAME: {
+					GameState = SHUTTING_DOWN;
+					break;
+				}
+				case scene::ReturnCodes::START_GAME: {
+					GameState = PLAY_LV_1;
+					break;
+				}
+				case scene::ReturnCodes::START_LV_2: {
+					GameState = PLAY_LV_2;
+					break;
+				}
+				}
+				break;
+			}
 		}
-		// - ^^ menu functionality - Kieran ^^ - //
+		// - ^^ menu functionality - //
 
 		// apply the changes to the screen 
 		Graphics::EndRender();

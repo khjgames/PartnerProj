@@ -6,6 +6,7 @@ using namespace std;
 class Vector2 {
 public:
 	Vector2(); // constructor
+	Vector2(int _x, int _y); // constructor
 	~Vector2(); // destructor
 	int x = 0;
 	int y = 0;
@@ -22,4 +23,16 @@ public:
 	int b = 0;
 	void Set(int _r, int _g, int _b);
 private:
+};
+
+struct RayDists {
+	int up = 0;
+	int down = 0;
+	int left = 0;
+	int right = 0;
+
+	int upId = 0;
+	int downId = 0;
+	int leftId = 0;
+	int rightId = 0;
 };

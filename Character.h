@@ -8,10 +8,6 @@ public:
 	Character(); // constructor
 	~Character(); // destructor
 	RectObject Body;
-	Vector2 RespawnPosition;
-	int JumpState = 0; 
-	void Move(bool dir);
-	void Jump();
 private:
-	bool Visible = true;
+	Vector2 RespawnPosition;
 };

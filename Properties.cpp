@@ -3,6 +3,7 @@
 // Making back-end game object classes for engine - Kieran
 
 Vector2::Vector2(){} // constructor
+Vector2::Vector2(int _x, int _y) { x = _x; y = _y; } // constructor
 Vector2::~Vector2(){} // destructor
 
 void Vector2::Set(int _x, int _y){
